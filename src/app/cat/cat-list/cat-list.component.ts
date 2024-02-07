@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
   selector: 'app-cat-list',
   standalone: true,
   imports: [CommonModule],
-  providers: [CatServiceService],
   templateUrl: './cat-list.component.html',
   styleUrl: './cat-list.component.scss',
 })

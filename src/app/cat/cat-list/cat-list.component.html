@@ -1,9 +1,24 @@
-<div class="container mx-auto p-4">
-  <h1 class="mb-4 text-3xl font-bold">Cats</h1>
+<h1 class="mb-4 text-3xl font-bold">Cats</h1>
 
-  <section class="leading-7 text-gray-700">
-    <div class="flex flex-row" *ngFor="let cat of cats$ | async">
-      {{ cat.name }} {{ cat.id }}
-    </div>
-  </section>
-</div>
+<section class="leading-7 text-gray-700">
+  <div class="flex flex-wrap gap-4">
+    @for (cat of cats$ | async; track cat) {
+      <div class="aspect-[3/2] w-32 text-center">
+        <div class="rounded-t-md border-b-2 bg-gray-50 p-1 text-center">
+          <a
+            class="w-100 h-100 block hover:underline"
+            href="/details/{{ cat.id }}"
+            >{{ cat.name }}</a
+          >
+        </div>
+        <div class="p1 rounded-b-md bg-gray-50 text-sm">
+          @if (cat.adopted) {
+            Adopted 😸
+          } @else {
+            Not adopted 😿
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

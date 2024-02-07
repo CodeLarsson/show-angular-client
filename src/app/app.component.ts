@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,9 @@ import { FooterComponent } from './footer/footer.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'angular-frontend';
+  title = 'Cats-R-Us';
+
+  constructor(readonly titleService: Title) {
+    titleService.setTitle(this.title);
+  }
 }

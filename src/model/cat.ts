@@ -1,4 +1,4 @@
-export interface Cat {
+export type Cat = {
   name: string;
   breed: string;
   age: number;
@@ -8,4 +8,4 @@ export interface Cat {
   favouriteFood: string;
   id?: string;
   adopted: boolean;
-}
+};

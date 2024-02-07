@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-cat-details',
   standalone: true,
   imports: [CommonModule],
-  providers: [CatServiceService],
   templateUrl: './cat-details.component.html',
   styleUrl: './cat-details.component.scss',
 })

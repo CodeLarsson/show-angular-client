@@ -1,0 +1,11 @@
+@for (blog of blog_list$ | async; track blog) {
+  <div class="mb-4 flex flex-col">
+    <h2 class="text-lg font-bold">
+      <a href="/blog/{{ blog.slug }}">{{ blog.title }}</a>
+    </h2>
+    <p class="text-sm">Published: {{ blog.metadataRef.published | date }}</p>
+    @if (blog.metadataRef.tags) {
+      <p class="text-sm">{{ blog.metadataRef.tags }}</p>
+    }
+  </div>
+}

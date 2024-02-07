@@ -1,3 +1,7 @@
-<div *ngIf="cat$ | async as cat">
-  {{ cat.name }}
-</div>
+@if (cat$ | async; as cat) {
+  <div>
+    <h1 class="mb-4 text-3xl font-bold">{{ cat.name }}</h1>
+
+    {{ cat.breed }}
+  </div>
+}
